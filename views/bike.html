@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/bike.css">
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    h3 {
+        margin-left: 600px;
+    }
+    
+    input[type=text],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+    
+    input[type=submit] {
+        background-color: #0470aa;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+        background-color: #8fa045;
+    }
+    
+    .container {
+        border-radius: 5px;
+        background-color: honeydew;
+        padding: 20px;
+    }
+</style>
+
+
+<body>
+
+
+    <div class="slider-container">
+
+        <h1>iCON Bikes!</h1>
+
+
+        <div class="slider">
+            <div class="slides">
+                <div id="slides__1" class="slide">
+                    <img src="/images/bmw.jpg" width="500px">
+                    <a class="slide__prev" href="#slides__7" title="Next"></a>
+                    <a class="slide__next" href="#slides__2" title="Next"></a>
+                </div>
+                <div id="slides__2" class="slide">
+                    <img src="/images/bullet.jpg" width="500px">
+                    <a class="slide__prev" href="#slides__1" title="Prev"></a>
+                    <a class="slide__next" href="#slides__3" title="Next"></a>
+                </div>
+                <div id="slides__3" class="slide">
+                    <img src="/images/images.jpg" width="500px">
+                    <a class="slide__prev" href="#slides__2" title="Prev"></a>
+                    <a class="slide__next" href="#slides__4" title="Next"></a>
+                </div>
+                <div id="slides__4" class="slide">
+                    <img src="/images/images (1).jpg" width="500px">
+                    <a class="slide__prev" href="#slides__3" title="Prev"></a>
+                    <a class="slide__next" href="#slides__1" title="Prev"></a>
+                </div>
+                <div id="slides__5" class="slide">
+                    <img src="/images/images (2).jpg" width="500px">
+                    <a class="slide__prev" href="#slides__4" title="Prev"></a>
+                    <a class="slide__next" href="#slides__6" title="Prev"></a>
+                </div>
+                <div id="slides__6" class="slide">
+                    <img src="/images/images2.jpg" width="500px">
+                    <a class="slide__prev" href="#slides__5" title="Prev"></a>
+                    <a class="slide__next" href="#slides__7" title="Prev"></a>
+                </div>
+                <div id="slides__7" class="slide">
+                    <img src="/images/splender.webp" width="500px">
+                    <a class="slide__prev" href="#slides__6" title="Prev"></a>
+                    <a class="slide__next" href="#slides__1" title="Prev"></a>
+                </div>
+            </div>
+            <div class="slider__nav">
+                <a class="slider__navlink" href="#slides__1"></a>
+                <a class="slider__navlink" href="#slides__2"></a>
+                <a class="slider__navlink" href="#slides__3"></a>
+                <a class="slider__navlink" href="#slides__4"></a>
+                <a class="slider__navlink" href="#slides__5"></a>
+                <a class="slider__navlink" href="#slides__6"></a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <h3>Contact Form</h3>
+
+    <div class="container">
+        <form action="/form" method="post">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Your email.." required>
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" placeholder="Your phone Number.." required>
+            <label for="address">Phone Number</label>
+            <input type="text" id="address" name="address" placeholder="Your street address.." required>
+
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" placeholder="city" required>
+
+
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" placeholder="state" required>
+
+            <label for="country">Country</label>
+            <select id="country" name="country" required>
+                <option value="none">None</option>
+      <option value="india">India</option>
+      <option value="Australia">Australia</option>
+      <option value="America">America</option>
+      <option value="NewZealand">NewZealand</option>
+    </select>
+            <label for="bike" name="bikes">Bikes</label>
+            <select id="bike" name="bikes" required>
+         <option value="none">None</option>       
+        <option value="Honda">Honda</option>
+        <option value="Hero">Hero</option>
+        <option value="TVS">TVS</option>
+        <option value="E-bike">E-bike</option>
+      </select>
+            <label for="prize" name="prize">Prizes</label>
+            <select id="prize" name="prize" required>
+                <option value="none">None</option>
+        <option value="less than 500$">Less than 500$</option>
+        <option value="500$-700$">500$-700$</option>
+        <option value="701$-1000$">701$-1000$</option>
+        <option value="more than 1000$">More than 1000$</option>
+      </select>
+
+            <label for="subject">Question</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+
+</html>
+
+
+
+
+</a>
+</body>
+
+</html>
